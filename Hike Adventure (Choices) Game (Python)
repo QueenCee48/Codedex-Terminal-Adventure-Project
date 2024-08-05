@@ -15,7 +15,7 @@ print("\nYou look up in awe, realizing how tall the mountain is...")
 choice_one = int(input("1. NOPE \n2. I got this!\n\n"))
 
 if choice_one == 1:
- print("You chose not to face the hike. Better luck next time!")
+ print("\nYou chose not to face the hike. Better luck next time!")
  exit()
 
 else:
