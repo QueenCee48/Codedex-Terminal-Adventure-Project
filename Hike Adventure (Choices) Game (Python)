@@ -1,0 +1,103 @@
+# Write code below 💖
+
+health = 100
+energy = 100
+ending_one = 0
+ending_two = 0
+
+print("Welcome to the Hike Adventure Game!")
+
+print("\nEach choice will have an affect on how your story ends, so choose wisely.")
+
+print("Your adventure begins on a bright sunny day at the foot of Rocktail Mountain.")
+print("\nYou look up in awe, realizing how tall the mountain is...")
+
+choice_one = int(input("1. NOPE \n2. I got this!\n\n"))
+
+if choice_one == 1:
+ print("You chose not to face the hike. Better luck next time!")
+ exit()
+
+else:
+ ending_one += 1
+ ending_two += 1
+ print("\nAfter some reassurance, you proceed to start your hike. Unaware of what is to come.")
+
+print("As you ascend the mountain, you feel a nice breeze and hear the birds chirping. 'This is peaceful,' you begin to think to yourself.")
+print("\nNext thing you know, you walk straight into a spider web...")
+
+choice_two = int(input("1. SCREAM and FREAK OUT! \n2. Calmly brush it off.\n\n"))
+
+if choice_two == 1:
+ ending_one += 1
+ energy -= 10
+ print("\nYou had a mini heart attack before you realized there was no spider...")
+ print("Energy -10")
+
+else:
+ ending_two += 1
+ print("\nLuckily there wasn't a spider and you saved some energy by not freaking out.")
+
+print("\nOnce more, you proceed with your hike...only now, you are more aware of your surroundings.")
+print("You start to notice the wind blowing through the leaves, beautiful butterflies passing by... ")
+print("You even close your eyes to admire the natural pine scent from the nearby trees.")
+print("While your eyes are closed, it suddenly goes silent...and then a rustling in the trees.")
+print("\nYou open your eyes and realize, there is no one else around you...")
+
+choice_three = int(input("1. Investigate the noise. \n2. NOPE \n\n"))
+
+if choice_three == 1:
+ ending_two += 1
+ health -= 20
+ energy -= 5
+ print("\nYou follow in the direction of the sound...")
+ print("A squirrel startles you and you trip and roll your ankle.")
+ print("Health -20 \nEnergy -5")
+
+else:
+ ending_one +=1
+ print("\nYou choose to ignore the noise and hurry off before you mess around and find out.")
+
+print("\nDetermined to make it to the top of the mountain, you try to focus your mind again.")
+print("After a few moments at a steady pace, you finally catch up to other hikers. You realize you like the company of others while on this adventure.")
+print("\nYou and a few randoms make it up a good distance...suddenly the lady in front of you slips on a rock and starts stumbling in your direction...")
+
+choice_four = int(input("1. Step out of the way. Your safety comes first. \n2. Catch her so she doesn't get hurt. \n\n"))
+
+if choice_four == 1:
+ ending_one += 1
+ print("\nThankfully, the person behind you was able to catch her and no one got hurt.")
+
+else:
+ ending_two += 1
+ health -= 10
+ energy -= 20
+ print("\nYou were able to catch her...but you both fell over and you broke her fall with your own body.")
+ print("Health -10 \nEnergy -20")
+
+print("\nYou guys decide to take a short water break before hiking the last little bit. Altogether, alive and somewhat well, you finally make it to the top.")
+print("You turn around to scope out the scenery and your breath is taken away. The clear blue sky, the city in the distance, the cooling breeze against your sweat...you begin to feel like it was all worth it.")
+print("\nAfter taking it all in, it is time to descend the mountain.")
+
+choice_five = int(input("1. Run down the mountain as fast as you can. \n2. Carefully take your time going back down. \n\n"))
+
+if choice_five == 1:
+ ending_two += 2
+ health -= 40
+ energy -= 45
+ print("\nYou trip halfway down and then tumble the rest of the way down the mountain...Why would you even do that?!")
+ print("Health -40 \nEnergy -45")
+
+else:
+ ending_one += 2
+ print("\nIt took some time, but you made it back down the mountain.")
+
+if ending_one > ending_two:
+ print("\nYou completed your mission with minimal injuries. Congratulations!!")
+
+else:
+ print("\nYou may have had several injuries...but you completed the mission nonetheless!")
+
+print("\nHealth: ", health, "\nEnergy: ", energy)
+
+exit()
